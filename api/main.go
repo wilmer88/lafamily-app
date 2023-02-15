@@ -24,7 +24,7 @@ func setupRouter() *gin.Engine {
 
 	r := gin.Default()
 	config := cors.DefaultConfig()
-	config.AllowOrigins = []string{"https://lafamily.herokuapp.com/"}
+	config.AllowOrigins = []string{"/"}
 	r.Use(cors.New(config))
 	r.GET("ping", func(c *gin.Context) {
 		c.JSON(http.StatusOK, "pong")
