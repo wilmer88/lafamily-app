@@ -6,6 +6,7 @@ import (
 
 type Fammember struct {
 	gorm.Model
+	Id   int
 	FirstName  string
 	Happiness int
 	UrlStr string
@@ -30,8 +31,8 @@ func GetUsers(db *gorm.DB, User *[]Fammember) (err error) {
 }
 
 //get user by id
-func GetUser(db *gorm.DB, User *Fammember, id int) (err error) {
-	err = db.Where("id = ?", id).First(User).Error
+func GetUser(db *gorm.DB, User *Fammember, Id int) (err error) {
+	err = db.Where("Id = ?", Id).First(User).Error
 	if err != nil {
 		return err
 	}
@@ -45,7 +46,7 @@ func UpdateUser(db *gorm.DB, User *Fammember) (err error) {
 }
 
 //delete user
-func DeleteUser(db *gorm.DB, User *Fammember, id int) (err error) {
-	db.Where("id = ?", id).Delete(User)
+func DeleteUser(db *gorm.DB, User *Fammember, Id int) (err error) {
+	db.Where("Id = ?", Id).Delete(User)
 	return nil
 }

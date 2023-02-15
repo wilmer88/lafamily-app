@@ -5,7 +5,7 @@ WORKDIR /app
 
 # Setup buildpack
 RUN mkdir -p /tmp/buildpack/heroku/go /tmp/build_cache /tmp/env
-RUN curl https://github.com/heroku/go-getting-started.git | tar xz -C /tmp/buildpack/heroku/go
+RUN curl https://buildpack-registry.s3.amazonaws.com/buildpacks/heroku/go.tgz | tar xz -C /tmp/buildpack/heroku/go
 
 #Execute Buildpack
 RUN STACK=heroku-20 /tmp/buildpack/heroku/go/bin/compile /app /tmp/build_cache /tmp/env
