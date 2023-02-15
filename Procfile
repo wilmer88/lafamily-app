@@ -1,2 +1,2 @@
 web: thefamilia
-build: npm install && ng build --prod
+build: cd client && npm install && ng build --prod
