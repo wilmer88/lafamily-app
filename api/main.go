@@ -1,6 +1,7 @@
 package main
 
 import (
+	"os"
 	"github.com/gin-contrib/cors"
 	"github.com/gin-gonic/gin"
 	"github.com/wilmer88/thefamila/api/controllers"
@@ -9,12 +10,12 @@ import (
 )
 
 func main() {
-	// port := os.Getenv("Port")
-	// if port ==""{
-	// 	port = "8080"
-	// }
+	port := os.Getenv("Port")
+	if port ==""{
+		port = "8080"
+	}
 	r := setupRouter()
-	_ = r.Run(":8080")
+	_ = r.Run(":"+port)
 	
 }
 

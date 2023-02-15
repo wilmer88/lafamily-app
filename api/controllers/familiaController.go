@@ -4,12 +4,14 @@ import (
 	"errors"
 	// "gorm-test/database"
 	// "gorm-test/models"
+
 	"net/http"
 	"strconv"
 	"github.com/gin-gonic/gin"
 	"github.com/wilmer88/thefamila/api/database"
 	"github.com/wilmer88/thefamila/api/models"
 	"gorm.io/gorm"
+	_ "github.com/heroku/x/hmetrics/onload"
 )
 
 type Familia struct {
