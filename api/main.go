@@ -9,13 +9,10 @@ import (
 )
 
 func main() {
-
 	// port := os.Getenv("Port")
 	// if port ==""{
 	// 	port = "8080"
 	// }
-
-
 	r := setupRouter()
 	_ = r.Run(":8080")
 	
