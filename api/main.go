@@ -1,26 +1,23 @@
 package main
 
 import (
-	"os"
-
 	"github.com/gin-contrib/cors"
 	"github.com/gin-gonic/gin"
 	"github.com/wilmer88/thefamila/api/controllers"
-
 	// "gorm-test/controllers"
 	"net/http"
 )
 
 func main() {
 
-	port := os.Getenv("Port")
-	if port ==""{
-		port = "8080"
-	}
+	// port := os.Getenv("Port")
+	// if port ==""{
+	// 	port = "8080"
+	// }
 
 
 	r := setupRouter()
-	_ = r.Run(":"+port)
+	_ = r.Run(":8080")
 	
 }
 
