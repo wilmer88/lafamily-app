@@ -7,6 +7,7 @@ import (
 	"github.com/wilmer88/thefamila/api/controllers"
 	// "gorm-test/controllers"
 	"net/http"
+	_ "github.com/heroku/x/hmetrics/onload"
 )
 
 func main() {
